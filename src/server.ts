@@ -4,6 +4,7 @@ import cors from "cors";
 import helmet from "helmet";
 import sqlize from "./configs/db";
 import logger from "./configs/logger";
+import baseRoutes from "./routes";
 class Server {
     private app: Application;
 
@@ -32,7 +33,7 @@ class Server {
             });
     }
     private routerConfig(): void {
-        // this.app.use("/v1", )
+        this.app.use("/v1", baseRoutes)
     }
 
     public start = (port: number) => {

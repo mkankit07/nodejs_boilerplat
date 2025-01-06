@@ -21,13 +21,15 @@ Role.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        system_name: {
+        systemName: {
             type: DataTypes.STRING,
             allowNull: false,
+            field:"system_name"
         },
-        is_active: {
+        isActive: {
             type: DataTypes.BOOLEAN,
             defaultValue: true,
+            field:"is_active"
         },
         is_deleted: {
             type: DataTypes.BOOLEAN,
